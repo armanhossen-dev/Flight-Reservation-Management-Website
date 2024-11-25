@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* General Reset */
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #5897f4;
+  }
+
+  .welcome {
+    text-align: center;
+    background: url('images/bg1.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden; /* Ensures the blur effect stays within the section */
+}
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px); /* Blurs the background image */
+    z-index: 1;
+    transform: scale(1.1); /* Slightly enlarges the blurred background to cover edges */
+}
+
+
+.welcome h1,
+.welcome p {
+    top: 40%;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Creates a soft shadow */
+}
+.welcome h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+.welcome p {
+    font-size: 1.35rem;
+}
+
+
+  /* Home Section */
+  .home {
+    height: 100vh;
+    background: url('Assets/background.jpg') no-repeat center center/cover;
+    position: relative;
+  }
+    
+  .home .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .home h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .home p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .home .btn {
+    text-decoration: none;
+    background: #007BFF;
+    border: 2px solid #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.home .btn:hover {
+    background: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+
+/*
+
+  Responsive Design 
+  @media (max-width: 768px) {
+}
+*/
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .home .overlay {
+        width: 100vw;
+        position: absolute;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-transform: uppercase;
+      }
+      
+      .home h1 {
+        font-size: 21px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      
+      .home p {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 14px;
+      }
+      
+      .home .btn {
+        border: 1px solid #c20635;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
+
+
+
+  /* Services Section */
+  .services, .about-us, .feedback {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #5897f4;
+  }
+  .services h2, .about h2, .feedback h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .service-cards, .feedback-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card h3, .card h4 {
+    margin: 10px 0;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+
+
+  /* About Us Section */
+.about-us {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 20px;
+  margin: 30px;
+}
+.about-us:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #5897f4;
+}
+.about-us p {
+  font-size: 20px;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .about-us h2 {
+    font-size: 1.8rem;
+}
+}
+@media (max-width: 480px) {
+  .about-us h2 {
+    font-size: 1.5rem;
+}
+.about-us p {
+    font-size: 15px;
+    text-align: justify;
+}
+}
+
+.logoshov:hover{
+  color: white;
+}

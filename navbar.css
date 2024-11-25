@@ -1,0 +1,489 @@
+
+nav{
+    padding-top: 5px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    background-color: rgb(0, 110, 255);    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+}
+
+.AHRN{
+    width: 85px;    
+    position: absolute;
+    left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+nav a{
+    text-transform: uppercase;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:white ;
+    transition: .5s;
+    font-size: 18px;    
+}
+
+nav a:hover{
+   color: #34a3e7;
+   border-radius: 8px;
+   /*color: red;*/
+}
+nav a.active{
+   color: #34a3e7;
+}
+nav a.active:hover{
+   color: rgb(255, 255, 255);
+}
+
+
+nav #home-link{
+    margin-left: auto;
+}
+
+nav svg{
+    fill: var(--text-color);
+}
+
+.close-sidebar-button,
+.open-sidebar-button{
+    background-color: rgb(0, 145, 255);
+    border-radius: 5px;
+    margin: 7px;
+}
+
+
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        z-index: 10000;
+        background-color: #0f0f0f;
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: .75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        
+    }
+    #sidebar-active:checked ~ .links-container{
+        padding: 10px;
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+    }
+    /*
+    ::-webkit-scrollbar-thumb {
+    background: #49b3f0;
+    border-radius: 4px;
+    }
+    */
+    /*selection*/
+    ::selection {
+        background-color: #2f80ed;
+        color: rgb(255, 255, 255); 
+    }
+    /* This is for Firefox */
+    ::-moz-selection {
+    background-color: #2f80ed;
+    color: white;
+    }
+
+
+
+
+.footer {
+    bottom: 0;
+    background-color: #001c3d;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2f80ed;
+}
+
+.footer-logo p {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2f80ed;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+i{
+    color: white;
+    font-size: 30px;
+    transition: .5s;
+}
+.social-media a .fb:hover{
+    color: #1da1f2; 
+}
+
+.social-media a .wt:hover{
+    color: #4FCE5D; 
+}
+.social-media a .ins:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-text-fill-color: transparent;
+}
+.social-media a .ln:hover{
+    color: #007bb8; 
+}
+
+
+
+.footer-links ul li a:hover {
+    color: #2f80ed;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.5s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2px;
+    font-size: 14px;
+    color: white;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* FAQ Modal Styles */
+.faq-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.faq-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+}
+
+#close-modal {
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#close-modal:hover {
+    background-color: red;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+.faq-modal-content h3{
+    font-size: 28px;
+    text-align: center;
+    color: #2f80ed;
+}
+.faq-question {
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.faq-question:hover {
+    background-color: #2f88fb;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-top: 5px;
+    border-left: 5px solid #2f80ed;
+    
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.dropdown-icon {
+    transition: transform 0.5s ease;
+}
+
+/* Rotate the icon when the answer is visible */
+.faq-item.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: left;
+    }
+    .social-media{
+        text-align: center;
+    }
+
+    .footer-logo, .footer-links, .footer-contact {
+        margin-bottom: 20px;
+    }
+
+    .faq-modal-content {
+        width: 90%;
+    }
+    .faq-modal-content h3{
+        font-size: 22px;
+    }
+}
+
+/* Social Media Popup Styles */
+.social-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.social-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+}
+.social-popup-content h3{
+    font-size: 20px;
+    color: #2f80ed;
+}
+
+#close-popup {
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-media i{
+    color: #47c2ff;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s ease;
+}
+
+
+.social-media a:hover i {
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design for Popup */
+@media (max-width: 768px) {
+    .social-popup-content {
+        width: 90%;
+    }
+}
+
+/* How It Works Popup Styles */
+.how-it-works-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.how-it-works-popup-content {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+}
+
+#close-how-it-works-popup {
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    transition: 0.5s;
+}
+#close-how-it-works-popup:hover {
+    background-color: red;
+}
+
+.how-it-works-popup h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #1da1f2;
+}
+
+.how-it-works-popup ul {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 2px;
+    list-style-type: none; /* Removes the bullet points */
+}
+
+.how-it-works-popup li {
+    margin-bottom: 10px;
+}
+
+.how-it-works-popup p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Responsive Design for Popup */
+@media (max-width: 768px) {
+    .how-it-works-popup-content {
+        width: 90%;
+    }
+}
